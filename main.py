@@ -26,9 +26,6 @@ while hlc != "same":
     guess = round(high - (high-low) / 2)
 
   count += 1
-
-  print(high)
-  print(low)
   
 if count == 1:
   print("I got it in 1 try! I guess I am the best bot :3")
