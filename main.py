@@ -16,8 +16,10 @@ while hlc != "same":
       high = 100
       
     guess = round((high-low) / 2 + low)
+
+    count += 1
     
-  if hlc == "lower":
+  elif hlc == "lower":
     high = guess
 
     if high == 50 & low == 50:
@@ -25,8 +27,13 @@ while hlc != "same":
     
     guess = round(high - (high-low) / 2)
 
-  count += 1
-  
+    count += 1
+
+  elif hlc != "lower" and hlc != "higher" and hlc != "same":
+    print("That is not a vaild answer")
+
+count += 1
+
 if count == 1:
   print("I got it in 1 try! I guess I am the best bot :3")
 else:
